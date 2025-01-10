@@ -71,6 +71,8 @@ if [[ "$JDK" == "JDK11" || "$JDK" == "jdk11" ]]; then
   export CTS_ANT_OPTS="-Djavax.xml.accessExternalStylesheet=all \
                  -Djavax.xml.accessExternalSchema=all \
      -Djavax.xml.accessExternalDTD=file,http"
+  export HTTP_HEADERS_VALIDATION="-Dorg.glassfish.grizzly.http.STRICT_HEADER_NAME_VALIDATION_RFC_9110=false \
+                                -Dorg.glassfish.grizzly.http.STRICT_HEADER_VALUE_VALIDATION_RFC_9110=false"   
 elif [[ "$JDK" == "JDK17" || "$JDK" == "jdk17" ]]; then
   export JAVA_HOME=${JDK17_HOME}
   export PATH=$JAVA_HOME/bin:$PATH
@@ -79,6 +81,8 @@ elif [[ "$JDK" == "JDK17" || "$JDK" == "jdk17" ]]; then
                   -Djavax.xml.accessExternalSchema=all \
   	 -DenableExternalEntityProcessing=true \
                    -Djavax.xml.accessExternalDTD=file,http"
+  export HTTP_HEADERS_VALIDATION="-Dorg.glassfish.grizzly.http.STRICT_HEADER_NAME_VALIDATION_RFC_9110=false \
+                                  -Dorg.glassfish.grizzly.http.STRICT_HEADER_VALUE_VALIDATION_RFC_9110=false"
   export CTS_ANT_OPTS="-Djavax.xml.accessExternalStylesheet=all \
                  -Djavax.xml.accessExternalSchema=all \
       -Djavax.xml.accessExternalDTD=file,http"
@@ -92,6 +96,8 @@ else
                  -Djavax.xml.accessExternalStylesheet=all \
                  -Djavax.xml.accessExternalSchema=all \
      -Djavax.xml.accessExternalDTD=file,http"
+  export HTTP_HEADERS_VALIDATION="-Dorg.glassfish.grizzly.http.STRICT_HEADER_NAME_VALIDATION_RFC_9110=false \
+                                  -Dorg.glassfish.grizzly.http.STRICT_HEADER_VALUE_VALIDATION_RFC_9110=false"
 
 fi
 
