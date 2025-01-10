@@ -70,7 +70,7 @@ if [[ "$JDK" == "JDK11" || "$JDK" == "jdk11" ]]; then
                  -Djavax.xml.accessExternalDTD=file,http"
   export CTS_ANT_OPTS="-Djavax.xml.accessExternalStylesheet=all \
                  -Djavax.xml.accessExternalSchema=all \
-     -Djavax.xml.accessExternalDTD=file,http"   
+     -Djavax.xml.accessExternalDTD=file,http"
 elif [[ "$JDK" == "JDK17" || "$JDK" == "jdk17" ]]; then
   export JAVA_HOME=${JDK17_HOME}
   export PATH=$JAVA_HOME/bin:$PATH
